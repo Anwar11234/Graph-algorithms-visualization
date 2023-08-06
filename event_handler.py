@@ -1,5 +1,5 @@
-from Grid import pygame
-from Grid import GridSearchVisualizer
+import pygame
+from GridSearchVisualizer import GridSearchVisualizer
 from colors import colors
 
 START_CELL = None

@@ -1,5 +1,4 @@
-import pygame
-from colors import colors 
+from colors import colors
 
 
 class Cell:
@@ -17,7 +16,7 @@ class Cell:
         self.parent = None
         self.visited = False
     
-    def get_grid_pos(self):
+    def get_cell_position(self):
         return self.row, self.col
         
     def is_wall(self):
@@ -25,9 +24,6 @@ class Cell:
     
     def change_color(self, color):
         self.color = color
-    
-    def draw(self, window):
-        pygame.draw.rect(window, self.color, (self.x, self.y, self.size, self.size))
     
     def get_neighbours(self):
         return self.neighbours
@@ -52,5 +48,5 @@ class Cell:
         self.f = self.g + self.h
     
     def calculate_heuristic(self, goal):
-        row, col = goal.get_grid_pos()
+        row, col = goal.get_cell_position()
         return abs(self.row - row) + abs(self.col - col)

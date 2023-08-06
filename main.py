@@ -1,11 +1,9 @@
-import visualization
+from GraphAlgorithmsVisualizer import GraphAlgorithmsVisualizer
 
 
 def main():
-    window_size = 800
-    visualization_caption = "Graph algorithms visualization"
-    visualization.run_visualization(window_size, visualization_caption)
-    return
+    graph_algorithms_visualizer = GraphAlgorithmsVisualizer(800, "Graph algorithms visualization")
+    graph_algorithms_visualizer.visualize()
 
 
 main()
